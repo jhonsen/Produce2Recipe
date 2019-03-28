@@ -32,7 +32,6 @@ I spend a lot time looking for recipes that would match the ingredients I have i
 - [Step1_DataAcquisition.ipynb](./notebooks/Step1_DataAcquisition.ipynb) - collecting images and webscraping epicurious for recipes
 - [Step2_Cleaning.ipynb](./notebooks/Step2_Cleaning.ipynb) - preliminary cleaning of the dataset 
 - [Step3_TopicModeling.ipynb](./notebooks/Step3_TopicModeling.ipynb) - _topic modeling_ of recipe titles 
-- [Step4_ImageClassification.ipynb](./notebo
-  oks/Step4_ImageClassification.ipynb) - image classification
+- [Step4_ImageClassification.ipynb](./notebooks/Step4_ImageClassification.ipynb) - image classification
 - [Step5_End-to-end-pipeline.ipynb](./notebooks/Step5_End-to-end-pipeline.ipynb) - example script of how images are fed into the model > output as text > key-search of tagged recipes
 - Other notebooks are labeled with a prefix: [Extra_](./notebooks/)  
