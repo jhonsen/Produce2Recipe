@@ -29,8 +29,10 @@ I spend a lot time looking for recipes that would match the ingredients I have i
 **Code, notebooks, and documents**
 
 - [Project_Report.md](./docs/Project5_Report.md), [Project_Presentation.pptx](./docs/Project_5_Presentation.pptx), or [PDF](./docs/Project_5_Presentation.pdf) - project report on markdown and powerpoint (or pdf) formats 
-- Step1_DataAcquisition.ipynb](./notebooks/) - collecting images using google-API and webscraping epicurious for recipes (_coming soon_)
-- Step2_Cleaning.ipynb](./notebooks/) - preliminary cleaning of the dataset (_coming soon_)
-- Step3_TopicModeling.ipynb](./notebooks/) - _topic modeling_ of recipe titles (_coming soon_) 
-- Step4_ImageClassification.ipynb](./notebooks/) - image classification (*coming soon*)
-- Step5_End-to-end-pipeline.ipynb(./notebooks/) - (*coming soon*)
+- [Step1_DataAcquisition.ipynb](./notebooks/Step1_DataAcquisition.ipynb) - collecting images and webscraping epicurious for recipes
+- [Step2_Cleaning.ipynb](./notebooks/Step2_Cleaning.ipynb) - preliminary cleaning of the dataset 
+- [Step3_TopicModeling.ipynb](./notebooks/Step3_TopicModeling.ipynb) - _topic modeling_ of recipe titles 
+- [Step4_ImageClassification.ipynb](./notebo
+  oks/Step4_ImageClassification.ipynb) - image classification
+- [Step5_End-to-end-pipeline.ipynb](./notebooks/Step5_End-to-end-pipeline.ipynb) - example script of how images are fed into the model > output as text > key-search of tagged recipes
+- Other notebooks are labeled with a prefix: [Extra_](./notebooks/)  
