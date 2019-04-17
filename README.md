@@ -17,6 +17,8 @@ Project-5 at METIS data science bootcamp
 
 I spend a lot time looking for recipes that would match the ingredients I have in my refrigerator.  Sometimes ~30 minutes is spent on google-searching and website-browsing, to get the one that's reasonable based on ingredients, prep time, nutritonal values, etc. I often feel that most cooking sites and mobile apps have too many functionalities to navigate through. So, I thought, *"Wouldn't it be nice to have a personalized recipe-finder that simply takes ingredient photos as the input ?"* I wanted to take a stab at this problem, i.e., building a recipe-finder that's personalized to my preferences. 
 
+_Full blog [post](https://jhonsen.github.io/archive/) coming soon!_ 
+
 - [x] **Objectives:**
   - [x] Collect recipes (text data) by webscraping _Epicurious_. Scraped info includes recipe title, -ingredients, -instructions, nutritional values, and photos  
   - [x] Collect images using Google API, for training a CNN model    
@@ -24,7 +26,9 @@ I spend a lot time looking for recipes that would match the ingredients I have i
   - [x] Perform topic modeling analysis for recipe-tagging, i.e., grouping them into different dish categories  
   - [x] Build a Flask app and a script that runs on a cellphone
 
-
+![vidgif](./docs/images/P2R_action.gif)
+  
+_Publicly accessible app coming soon!_
 
 **Code, notebooks, and documents**
 
