@@ -1,0 +1,17 @@
+google_images_download
+flask
+gunicorn
+numpy==1.16.2
+scikit-learn
+pandas
+numpy
+matplotlib
+pickleshare==0.7.5
+Jinja2
+Keras
+tqdm
+matplotlib
+nltk
+keras==2.2.4
+tensorflow==1.12
+h5py==2.10.0
