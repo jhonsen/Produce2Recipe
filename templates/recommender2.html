@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The List of Recipes </title>
+  <link rel="stylesheet" href="/static/css/recstyle.css" />
+  <!-- include jQuery, so we have access to the $.post function -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="/static/js/jquery.js"></script> 
+  <script src="/static/js/jquery.nice-select.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h2 id='ImageInput' style="padding-left:15px;"> Uploaded Images </h2>
+
+        <form action="/recommend">
+        
+              {% for (name, pic, pred) in picture_names|zip(picture_inputs, prediction) %}
+              <div class="column1" style="width: 30%; display: inline"></td>
+                    <!-- <input type="text" name="{{ f }}" value="{{x_input[loop.index0]}}"> -->
+                    <img src={{ pic }}  height="90%" width="90%" border="2"/> <br>
+                    <h5 style="font-weight:bold">{{pred}} </h5>
+              
+              </div>
+              {% endfor %}
+              <!-- <input type="submit" value="Submit" method="get"> -->
+
+
+
+          <br>
+        </form>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <p>
+    <div>
+      <tr>
+      
+      <!-- Selector Buttons for Categories  -->
+      <br><br><br><br>
+
+      <form action="" method="GET">
+        <h2 id='Match' style="padding-left:15px;"> LISTS of Matched Recipes</h2> 
+        <p style="padding-left: 5px;">Dish Category:</p>
+        
+          <select id="dishes" name="dishes" onchange="showCategory()">
+              <option data-display="Select" value="Main">Main Dish</option>
+              <option value="Side">Side Dish</option>
+              <option value="Salad">Salad </option>
+              <option value="Condiments">Condiments</option>
+              <option value="Dessert">Dessert</option>
+          </select>
+        
+          <!-- <p style="padding-left: 5px;">Ketogenic Option:</p>
+          <select id="keto" name="keto">
+              <option data-display="Select">No</option>
+              <option value="1">Yes</option>
+          </select> -->
+        
+      </form>
+
+      <!-- JQuery Selector Script -->
+      <script type="text/javascript">
+      
+        jQuery(function() {
+          jQuery('#car').change(function() {
+              this.form.submit();
+          });
+      });
+      </script>
+      
+      <!-- Five Dish Categories -->
+      <div id="Main" class="row">
+          <!-- 3-columns -->
+          {% for li in recommended_list_Main %}
+
+          <div class="column2" style="width:50%">
+            <!-- Recipes with # matching ingredients  -->
+            <h3 id="Main-matched" >{{li['name']}}</h3>
+            <!-- Each recipe's title and links -->
+            {% for (title, url, pic )in li['titles']|zip(li['links'],li['images']) %}
+              <div style="display:inline;">{{loop.index}}.<a href={{url}} >{{title}}</a></div> <br>
+                <img src={{ pic }}  height="80%" width="80%" border="2"/> <br><br>
+            {% endfor %}  <br>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div id="Side" class="row">
+          <!-- 3-columns -->
+          {% for li in recommended_list_Side %}
+      
+          <div class="column2" style="width:50%">
+            <!-- Recipes with # matching ingredients  -->
+            <h3 id="Side-matched">{{li['name']}}</h3>
+            <!-- Each recipe's title and links -->
+            {% for (title, url, pic )in li['titles']|zip(li['links'],li['images']) %}
+              <div style="display:inline;">{{loop.index}}.<a href={{url}} >{{title}}</a> </div><br>
+                <img src={{ pic }}  height="80%" width="80%"/> <br><br>
+            {% endfor %}  <br>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div id="Condiments" class="row">
+          <!-- 3-columns -->
+          {% for li in recommended_list_Condiments %}
+      
+          <div class="column2" style="width:50%">
+            <!-- Recipes with # matching ingredients  -->
+            <h3 id="Condiments-matched">{{li['name']}}</h3>
+            <!-- Each recipe's title and links -->
+            {% for (title, url, pic )in li['titles']|zip(li['links'],li['images']) %}
+              <div style="display:inline;">{{loop.index}}.<a href={{url}} >{{title}}</a></div> <br>
+                <img src={{ pic }}  height="80%" width="80%"/> <br><br>
+            {% endfor %}  <br>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div id="Dessert" class="row">
+          <!-- 3-columns -->
+          {% for li in recommended_list_Dessert %}
+      
+          <div class="column2" style="width:50%">
+            <!-- Recipes with # matching ingredients  -->
+            <h3 id="Dessert-matched">{{li['name']}}</h3>
+            <!-- Each recipe's title and links -->
+            {% for (title, url, pic )in li['titles']|zip(li['links'],li['images']) %}
+              <div style="display:inline;">{{loop.index}}.<a href={{url}} >{{title}}</a></div> <br>
+                <img src={{ pic }}  height="80%" width="80%"/> <br><br>
+            {% endfor %}  <br>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div id="Salad" class="row">
+          <!-- 3-columns -->
+          {% for li in recommended_list_Salad %}
+      
+          <div class="column2" style="width:50%">
+            <!-- Recipes with # matching ingredients  -->
+            <h3 id="Salad-matched">{{li['name']}}</h3>
+            <!-- Each recipe's title and links -->
+            {% for (title, url, pic )in li['titles']|zip(li['links'],li['images']) %}
+              <div style="display:inline;">{{loop.index}}.<a href={{url}} >{{title}}</a></div> <br>
+                <img src={{ pic }}  height="80%" width="80%"/> <br><br>
+            {% endfor %}  <br>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- JQUERY for showing Categories -->
+      <script>
+          function showCategory(){
+            $('.shownCategory').hide();
+            $('.shownCategory').removeClass('shownCategory');
+            const cat_to_show = $('#dishes').val();
+            console.log(cat_to_show);
+            $(`#${cat_to_show}`).show();
+            $(`#${cat_to_show}`).addClass('shownCategory')
+          }
+          
+          $('.row').hide();
+          
+          showCategory();
+          </script>
+
+      </tr>
+    </div>
+  </p>
+</body>
+
+</html>
