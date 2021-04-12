@@ -1,7 +1,7 @@
 import os
 import flask
 from flask import Flask, render_template, request
-from recipe_api import get_recipes, picture_names
+from src.recipe_api import get_recipes, picture_names
 import jinja2
 from jinja2 import Template
 
