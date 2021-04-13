@@ -454,3 +454,93 @@ def subcatToMaincat(df_in):
 
     return df_in
 
+# The final function
+def outputRecipes_Main(df_in):
+    '''Function returns another dataframe of only relevant data
+    Input:
+        df_in   - dataframe of interest
+    Output:
+        df_out  - containing 'title','ingredient','instructions'
+        links   - list of url's for each recipe
+        images  - list of image_paths
+
+    '''
+    df_out = df_in[['title','ingredients','instructions','keto_likely','mainCat','url','picture_link']]
+    df_out_Main = df_out[df_out.mainCat=='maindish']
+    links_Main  = [str(url) for url in df_out_Main.loc[:,'url'] ]
+    images = [str(each).split('/')[-1] for each in df_out_Main.loc[:,'picture_link'] ]
+    image_paths_Main = [f'./static/epicurious_images/{u}' if u != "0" else f'./static/epicurious_images/temp1.png' for u in images]
+
+    return df_out_Main, links_Main, image_paths_Main
+
+def outputRecipes_Side(df_in):
+    '''Function returns another dataframe of only relevant data
+    Input:
+        df_in   - dataframe of interest
+    Output:
+        df_out  - containing 'title','ingredient','instructions'
+        links   - list of url's for each recipe
+        images  - list of image_paths
+
+    '''
+    df_out = df_in[['title','ingredients','instructions','keto_likely','mainCat','url','picture_link']]
+    df_out_Side = df_out[df_out.mainCat=='sidedish']
+    links_Side  = [str(url) for url in  df_out_Side.loc[:,'url'] ]
+    images = [str(each).split('/')[-1] for each in df_out_Side.loc[:,'picture_link'] ]
+    image_paths_Side = [f'./static/epicurious_images/{u}' if u != "0" else f'./static/epicurious_images/temp1.png' for u in images]
+
+    return df_out_Side, links_Side, image_paths_Side
+
+def outputRecipes_Condiments(df_in):
+    '''Function returns another dataframe of only relevant data
+    Input:
+        df_in   - dataframe of interest
+    Output:
+        df_out  - containing 'title','ingredient','instructions'
+        links   - list of url's for each recipe
+        images  - list of image_paths
+
+    '''
+    df_out = df_in[['title','ingredients','instructions','keto_likely','mainCat','url','picture_link']]
+    df_out_Condiments = df_out[df_out.mainCat=='condiments']
+    links_Condiments  = [str(url) for url in df_out_Condiments.loc[:,'url'] ]
+    images = [str(each).split('/')[-1] for each in df_out_Condiments.loc[:,'picture_link'] ]
+    image_paths_Condiments = [f'./static/epicurious_images/{u}' if u != "0" else f'./static/epicurious_images/temp1.png' for u in images]
+
+    return df_out_Condiments, links_Condiments, image_paths_Condiments
+
+def outputRecipes_Dessert(df_in):
+    '''Function returns another dataframe of only relevant data
+    Input:
+        df_in   - dataframe of interest
+    Output:
+        df_out  - containing 'title','ingredient','instructions'
+        links   - list of url's for each recipe
+        images  - list of image_paths
+
+    '''
+    df_out = df_in[['title','ingredients','instructions','keto_likely','mainCat','url','picture_link']]
+    df_out_Dessert = df_out[df_out.mainCat=='dessert']
+    links_Dessert  = [str(url) for url in df_out_Dessert.loc[:,'url'] ]
+    images = [str(each).split('/')[-1] for each in df_out_Dessert.loc[:,'picture_link'] ]
+    image_paths_Dessert = [f'./static/epicurious_images/{u}' if u != "0" else f'./static/epicurious_images/temp1.png' for u in images]
+
+    return df_out_Dessert, links_Dessert, image_paths_Dessert
+
+def outputRecipes_Salad(df_in):
+    '''Function returns another dataframe of only relevant data
+    Input:
+        df_in   - dataframe of interest
+    Output:
+        df_out  - containing 'title','ingredient','instructions'
+        links   - list of url's for each recipe
+        images  - list of image_paths
+
+    '''
+    df_out = df_in[['title','ingredients','instructions','keto_likely','mainCat','url','picture_link']]
+    df_out_Salad = df_out[df_out.mainCat=='salad']
+    links_Salad  = [str(url) for url in df_out_Salad.loc[:,'url'] ]
+    images = [str(each).split('/')[-1] for each in df_out_Salad.loc[:,'picture_link'] ]
+    image_paths_Salad = [f'./static/epicurious_images/{u}' if u != "0" else f'./static/epicurious_images/temp1.png' for u in images]
+
+    return df_out_Salad, links_Salad, image_paths_Salad
