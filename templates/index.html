@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Produce2Recipe</title>
+	<link rel="stylesheet" href="/static/css/style.css" />
+	<!-- include jQuery, so we have access to the $.post function -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<!-- include our own functions -->
+	
+</head>
+
+<body>
+	<p>
+		<div class="left">
+				<h1 id="top"> Welcome to </h1>
+				<h1 id="top"> Produce-2-Recipe</h1><br>
+				<!-- <h4 id="top"> Submit your images to produce2recipe@yahoo.com</h4><br> -->
+				<h2>Select file(s) to upload</h2>
+				<p>
+					{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						<ul class=flashes>
+						{% for message in messages %}
+						<li>{{ message }}</li>
+						{% endfor %}
+						</ul>
+					{% endif %}
+					{% endwith %}
+				</p>
+				<form method="post" action="/" enctype="multipart/form-data">
+					<dl>
+						<p>
+							<input type="file" name="files[]" multiple="true" autocomplete="off" required>
+						</p>
+					</dl>
+					<p>
+						<input type="submit" value="Submit">
+					</p>
+				</form>
+				
+				<h3 id="top"> <a href="/recommend">Click to find Recipes!</a></h3> <br>
+				<h4> (It takes a few seconds to load the engine) </h4>
+		</div> 
+			
+		
+	</p>
+</body>
+
+</html>

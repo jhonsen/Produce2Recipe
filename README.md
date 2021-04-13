@@ -39,3 +39,11 @@ _Publicly accessible app coming soon!_
 - [Step4_ImageClassification.ipynb](./notebooks/Step4_ImageClassification.ipynb) - image classification
 - [Step5_End-to-end-pipeline.ipynb](./notebooks/Step5_End-to-end-pipeline.ipynb) - example script of how images are fed into the model > output as text > key-search of tagged recipes
 - Other notebooks are labeled with a prefix: [Extra_](./notebooks/)  
+
+**Instructions to run web_app prototype**
+1. Download 2 files from [this gdrive](https://drive.google.com/drive/folders/1kz-_Euwk2G4AZf4htolcbwZhWg1wjtQl?usp=sharing) and place them in `./models/` folder
+2. On terminal, run $>`python app.py`
+3. Copy the URL shown (e.g., http://127.0.0.1:5000/) into a browser
+4. Choose 1-3 images of produce from local machine
+5. Click Submit
+6. Click  *Find list of Recipes** link
