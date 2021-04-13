@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, flash, redirect
 # import jinja2
 # from jinja2 import Template
 from werkzeug.utils import secure_filename
-from recipe_api import get_recipes, picture_names
+from src.recipe_api import get_recipes, picture_names
 
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 

@@ -10,11 +10,9 @@ about whether Flask is working. A short check is run at the bottom of the file.
 import pickle
 import os
 import numpy as np
+from src.recipeScripts import *
 
 from keras.models import load_model
-from keras.applications import MobileNetV2
-from recipeScripts import *
-
 from keras import preprocessing
 import tensorflow as tf 
 
