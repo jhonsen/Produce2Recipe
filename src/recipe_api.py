@@ -91,7 +91,7 @@ def get_recipes(feature_dict):
     predicted_img = classify_result
     print('Classify>>>>>>>>>>',classify_result)
     # Return dataframes with intersections
-    d3, d2, d1, d = intersect(df, classify_result)
+    d3, d2, d1, _ = intersect(df, classify_result)
     
     common_ingredients = ['3-Ingredient Recipes',
                             '2-Ingredient Recipes',

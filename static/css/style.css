@@ -2,7 +2,7 @@
 body {
     font-family: Verdana,Arial,sans-serif;
     background-blend-mode: initial;
-    background-image: url('/static/images/background2_small.jpg');
+    background-image: url('/static/images/backsplash.jpg');
     background-repeat: no-repeat;
     background-size: 1920px 1280px;
 }
@@ -14,7 +14,7 @@ h1 {
  text-align: left;
  padding-left: 2%;
  -webkit-text-stroke: 1px black;
-   color: lightgray;
+   color: gray;
    text-shadow:
        3px 3px 0 #000,
      -1px -1px 0 #000,  
@@ -29,7 +29,7 @@ h2 {
     margin: 5px 20 10px 5;
     padding-left: 12%;
     -webkit-text-stroke: 1px black;
-      color: lightgray;
+      color: gray;
       text-shadow:
           3px 3px 0 #000,
         -1px -1px 0 #000,  
@@ -43,7 +43,7 @@ h7 {
     position:absolute;
     padding-left: 12%;
     -webkit-text-stroke: 1px black;
-      color: lightgray;
+      color: gray;
       text-shadow:
           3px 3px 0 #000,
         -1px -1px 0 #000,  

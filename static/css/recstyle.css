@@ -2,7 +2,7 @@
 body {
     font-family: Verdana,Arial,sans-serif;
     background-blend-mode: initial;
-    background-image: url('/static/images/backsplash_60.png');
+    background-image: url('/static/images/backsplash.jpg');
     background-repeat: no-repeat;
     background-size:cover;
 }
