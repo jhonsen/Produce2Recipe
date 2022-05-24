@@ -13,7 +13,7 @@ tqdm
 matplotlib
 nltk
 keras==2.2.4
-tensorflow==1.12
+tensorflow==2.6.4
 h5py==2.10.0
 kivy[base]
 kivy-examples
